@@ -132,7 +132,7 @@
         "docker.io/library/golang",
         "go"
       ],
-      "allowedVersions": "<1.19",
+      "allowedVersions": "<=1.19",
       "matchBaseBranches": [
         "v0.11"
       ]
@@ -141,7 +141,7 @@
       "matchPackageNames": [
         "docker.io/library/alpine"
       ],
-      "allowedVersions": "<3.17",
+      "allowedVersions": "<=3.17",
       "matchBaseBranches": [
         "v0.11"
       ]
@@ -168,7 +168,7 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "^\\.github/workflows/[^/]+\\.yaml$"
+        "^\\.github/workflows/[^/]+\\.ya?ml$"
       ],
       // This regex manages version strings in GitHub actions workflow files,
       // similar to the examples shown here:
