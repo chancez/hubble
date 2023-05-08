@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+        uses: actions/checkout@f095bcc56b7c2baf48f3ac70d6d6782f4f553222
       - name: Generate artifacts
         run: make release
       - name: Create Release
         id: create_release
-        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e
+        uses: actions/create-release@4c11c9fe1dcd9636620a16455165783b20fc7ea0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
@@ -30,7 +30,7 @@ jobs:
             Note for maintainers:: Please, update the desciption with the actual release notes (see RELEASE.md for instructions).
       - name: Upload artifacts 
         id: upload-release-artifacts
-        uses: skx/github-action-publish-binaries@b9ca5643b2f1d7371a6cba7f35333f1461bbc703
+        uses: skx/github-action-publish-binaries@44887b225ceca96efd8a912d39c09ad70312af31
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
