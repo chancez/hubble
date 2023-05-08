@@ -113,7 +113,7 @@
     },
     {
       // Update Go version used in images, CI, in the same group
-      "groupName": "golang-master",
+      "groupName": "golang",
       "matchPackageNames": [
         "docker.io/library/golang",
         "go"
@@ -121,7 +121,7 @@
     },
     // Limit versions that are allowed for stable branches to patch version updates
     {
-      "groupName": "golang-stable",
+      "groupName": "golang stable",
       "matchPackageNames": [
         "docker.io/library/golang",
         "go"
