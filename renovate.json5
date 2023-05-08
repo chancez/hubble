@@ -54,9 +54,6 @@
         "pin",
         "pinDigest"
       ],
-      "schedule": [
-        "on friday"
-      ]
     },
     {
       "groupName": "all go dependencies master",
@@ -76,9 +73,6 @@
         "patch",
         "pin",
         "pinDigest"
-      ],
-      "schedule": [
-        "on friday"
       ],
       matchBaseBranches: [
         "master"
@@ -122,9 +116,6 @@
       "matchFiles": [
         "Dockerfile",
       ],
-      "schedule": [
-        "on friday"
-      ]
     },
     // Limit versions that are allowed for stable branches to patch version updates
     {
