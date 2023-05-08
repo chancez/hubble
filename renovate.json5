@@ -112,14 +112,16 @@
       ]
     },
     {
-      "groupName": "golang-images-master",
-      "matchFiles": [
-        "Dockerfile",
+      // Update Go version used in images, CI, in the same group
+      "groupName": "golang-master",
+      "matchPackageNames": [
+        "docker.io/library/golang",
+        "go"
       ],
     },
     // Limit versions that are allowed for stable branches to patch version updates
     {
-      "groupName": "golang-images-stable",
+      "groupName": "golang-stable",
       "matchPackageNames": [
         "docker.io/library/golang",
         "go"
@@ -131,7 +133,8 @@
     },
     {
       // groupName is redundant but is helpful for referencing in docs what to update.
-      "groupName": "golang-images-stable",
+      "groupName": "golang-stable",
+      // Restrict the alpine version that can be used on stable branches
       "matchPackageNames": [
         "docker.io/library/alpine"
       ],
