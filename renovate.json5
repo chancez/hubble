@@ -85,7 +85,7 @@
       ]
     },
     {
-      // Do not allow any updates into stable branches.
+      // Do not allow any dependency updates into stable branches.
       "enabled": false,
       "groupName": "all go dependencies stable",
       "groupSlug": "all-go-deps-stable",
@@ -118,8 +118,7 @@
       ]
     },
     {
-      // Images that directly use docker.io/library/golang for building.
-      "groupName": "golang-images",
+      "groupName": "golang-images-master",
       "matchFiles": [
         "Dockerfile",
       ],
@@ -127,7 +126,9 @@
         "on friday"
       ]
     },
+    // Limit versions that are allowed for stable branches to patch version updates
     {
+      "groupName": "golang-images-stable",
       "matchPackageNames": [
         "docker.io/library/golang",
         "go"
@@ -135,9 +136,11 @@
       "allowedVersions": "<=1.19",
       "matchBaseBranches": [
         "v0.11"
-      ]
+      ],
     },
     {
+      // groupName is redundant but is helpful for referencing in docs what to update.
+      "groupName": "golang-images-stable",
       "matchPackageNames": [
         "docker.io/library/alpine"
       ],
@@ -155,8 +158,9 @@
       ]
     },
     {
-      // Do not allow any updates into stable branches.
+      // Do not allow any golangci-lint updates into stable branches.
       "enabled": false,
+      "groupName": "golangci-lint-stable",
       "matchDepNames": [
         "golangci/golangci-lint"
       ],
