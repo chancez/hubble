@@ -3,7 +3,7 @@
   "extends": [
     "config:base",
     ":gitSignOff",
-    "helpers:pinGitHubActionDigests"
+    /* "helpers:pinGitHubActionDigests" */
   ],
   // This ensures that the gitAuthor and gitSignOff fields match
   "gitAuthor": "renovate[bot] <bot@renovateapp.com>",
@@ -20,7 +20,7 @@
   "ignoreDeps": [
     "github.com/cilium/cilium"
   ],
-  "pinDigests": true,
+  /* "pinDigests": true, */
   "ignorePresets": [":prHourlyLimit2"],
   "separateMajorMinor": true,
   "separateMultipleMajor": true,
